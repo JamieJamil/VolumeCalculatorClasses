@@ -7,7 +7,7 @@
             // Loop som gør at programmet køre indtil man selv lukker det.
             while (true)
             {
-                // Loop af menuen.
+                // Loop menuen.
                 Menu();
             }
         }
