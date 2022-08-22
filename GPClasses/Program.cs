@@ -13,7 +13,7 @@
         }
         internal static void Menu()
         {
-            // Clear for bedre visualisering.
+            // Clear for bedre visualisering og mindre clutter.
             Console.Clear();
             Console.WriteLine("What do you want to calculate the volume of?\n\n[1] Cylinder\n[2] Sphere\n[3] Rectangle\n[4] Cone\n[5] Cube");
             Console.WriteLine("");
