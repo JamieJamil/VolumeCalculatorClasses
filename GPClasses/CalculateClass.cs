@@ -2,7 +2,7 @@
 {
     internal class CalculateClass
     {
-        // Metode af Cylinder.
+        // Metode Cylinder.
         internal static double CylinderVol()
         {
             Console.Clear();
@@ -24,7 +24,7 @@
 
             return volume;
         }
-        // Metode af Sphere.
+        // Metode Sphere.
         internal static double SphereVol()
         {
             Console.Clear();
@@ -41,7 +41,7 @@
 
             return volume;
         }
-        // Metode af Rectangle.
+        // Metode Rectangle.
         internal static double RectangleVol()
         {
             Console.Clear();
@@ -68,7 +68,7 @@
 
             return volume;
         }
-        // Metode af Cone.
+        // Metode Cone.
         internal static double ConeVol()
         {
             Console.Clear();
@@ -90,7 +90,7 @@
 
             return volume;
         }
-        // Metode af Cube.
+        // Metode Cube.
         internal static double CubeVol()
         {
             Console.Clear();
@@ -111,7 +111,7 @@
         internal static double CheckDouble(string input)
         {
             bool b = double.TryParse(input, out double value);
-            // Hviis input er mindre en 1 eller ikke et tal vil den give fejlmeddelelse.
+            // Hvis input er mindre en 1 eller ikke et tal vil den give fejlmeddelelse.
             while (!b || value <= 0)
             {
                 Console.WriteLine("Wrong input, try again");
