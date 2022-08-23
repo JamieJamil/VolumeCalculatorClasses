@@ -4,25 +4,23 @@
     {
         internal static void Main(string[] args)
         {
-            // Loop som gør at programmet køre indtil man selv lukker det.
+            // Loop that makes the program run over and over again until user closes it.
             while (true)
             {
-                // Loop af menuen.
+                // Loop of the menu.
                 Menu();
             }
         }
         internal static void Menu()
         {
-            // Clear for bedre visualisering og mindre clutter.
+            // Clear for better visiuals and less clutter.
             Console.Clear();
             Console.WriteLine("What do you want to calculate the volume of?\n\n[1] Cylinder\n[2] Sphere\n[3] Rectangle\n[4] Cone\n[5] Cube");
             Console.WriteLine("");
             Console.WriteLine("Go to:");
-            // Switch cases med metoder, der kommer an på hvad brugeren indtaster.
+            // Switch with cases that contains the methods, user choose input.
             switch (Console.ReadKey(true).Key)
-            {
-
-                // NumPad1, er så man også kan bruge numpad og de foeskellige metoder.
+            {             
                 case ConsoleKey.NumPad1:
                 case ConsoleKey.D1:
                     CalculateClass.CylinderVol();

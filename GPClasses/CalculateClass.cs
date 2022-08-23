@@ -2,21 +2,21 @@
 {
     internal class CalculateClass
     {
-        // Metode Cylinder.
+        // Method Cylinder.
         internal static double CylinderVol()
         {
             Console.Clear();
             Console.WriteLine("Enter radius: ");
-            // Tager brugerens input.
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double radius = CheckDouble(Console.ReadLine());
 
             Console.WriteLine("Enter height: ");
-            // Tager brugerens input.
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double height = CheckDouble(Console.ReadLine());
 
-            // Udregning for at finde rumfanget.
+            // Calculations to find the volume.
             double volume = Math.PI * Math.Pow(radius, 2) * height;
 
             Console.WriteLine($"Volume of the cylinder is {volume:0.##}");
@@ -24,16 +24,16 @@
 
             return volume;
         }
-        // Metode Sphere.
+        // Method Sphere.
         internal static double SphereVol()
         {
             Console.Clear();
             Console.WriteLine("Enter radius: ");
-            // Tager brugerens input.
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double radius = CheckDouble(Console.ReadLine());
 
-            // Udregning for at finde rumfanget.
+            // Calculations to find the volume.
             double volume = (4.0 / 3 * Math.PI * radius * radius * radius);
 
             Console.WriteLine($"Volume of the sphere is {volume:0.##}");
@@ -41,26 +41,26 @@
 
             return volume;
         }
-        // Metode Rectangle.
+        // Method Rectangle.
         internal static double RectangleVol()
         {
             Console.Clear();
             Console.WriteLine("Enter length: ");
-            // Tager brugerens input.
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double length = CheckDouble(Console.ReadLine());
 
             Console.WriteLine("Enter width: ");
-            // Tager brugerens input
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double width = CheckDouble(Console.ReadLine());
 
             Console.WriteLine("Enter height: ");
-            // Tager brugerens input.
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double height = CheckDouble(Console.ReadLine());
 
-            // Udregning for at finde rumfanget.
+            // Calculations to find the volume.
             double volume = length * width * height;
 
             Console.WriteLine($"Volume of the rectangle is {volume:0.##}");
@@ -68,21 +68,21 @@
 
             return volume;
         }
-        // Metode Cone.
+        // Method Cone.
         internal static double ConeVol()
         {
             Console.Clear();
             Console.WriteLine("Enter radius: ");
-            // Tager brugerens input.
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double radius = CheckDouble(Console.ReadLine());
 
             Console.WriteLine("Enter height: ");
-            // Tager brugerens input.
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double height = CheckDouble(Console.ReadLine());
 
-            // Udregning for at finde rumfanget.
+            // Calculations to find the volume.
             double volume = (1.0 / 3) * Math.PI * height * radius * radius;
 
             Console.WriteLine($"Volume of the cone is {volume:0.##}");
@@ -90,16 +90,16 @@
 
             return volume;
         }
-        // Metode Cube.
+        // Method Cube.
         internal static double CubeVol()
         {
             Console.Clear();
             Console.WriteLine("Enter side length: ");
-            // Tager brugerens input.
-            // CheckDouble checker om brugerens input er godkendt.
+            // Takes input from user.
+            // CheckDouble checks if user input is correct.
             double length = CheckDouble(Console.ReadLine());
 
-            // Udregning for at finde rumfanget.
+            // Calculations to find the volume.
             double volume = length * length * length;
 
             Console.WriteLine($"Volume of the cube is {volume:0.##}");
@@ -107,16 +107,16 @@
 
             return volume;
         }
-        // Metode der checker brugerens input.
+        // Method that checks users input.
         internal static double CheckDouble(string input)
         {
             bool b = double.TryParse(input, out double value);
-            // Hvis input er mindre en 1 eller ikke et tal vil den give fejlmeddelelse.
+            // If the input is lower than 1 or not a digit it will give an error message
             while (!b || value <= 0)
             {
                 Console.WriteLine("Wrong input, try again");
                 input = Console.ReadLine();
-                // Tager brugerens nye input.
+                // Takes user input again in case it was wrong.
                 b = double.TryParse(input, out value);
             }
             return value;
